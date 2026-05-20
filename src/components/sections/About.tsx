@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { VALUES } from "@/constants";
 
@@ -35,30 +36,30 @@ export const About = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-none"
                 >
-                  L'excellence <br />
-                  <span className="text-gold">architecturale</span>
-                </motion.h2>
-              </div>
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-6 text-charcoal text-lg leading-relaxed font-medium"
-              >
-                <p>
-                  MP SERVICES IMMO est une entreprise leader dans le secteur de la construction et des services immobiliers au Congo. Notre vision est de redéfinir les standards de qualité et d'innovation dans la région.
-                </p>
-                <p>
-                  Avec des années d'expérience et une équipe d'experts dévoués, nous transformons les défis complexes en solutions durables et esthétiques. Chaque projet est pour nous une opportunité de démontrer notre savoir-faire et notre engagement envers l'excellence.
-                </p>
-              </motion.div>
+                L&apos;excellence <br />
+                <span className="text-gold">architecturale</span>
+              </motion.h2>
+            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-6 text-charcoal text-lg leading-relaxed font-medium"
+            >
+              <p>
+                MP SERVICES IMMO est une entreprise leader dans le secteur de la construction et des services immobiliers au Congo. Notre vision est de redéfinir les standards de qualité et d&apos;innovation dans la région.
+              </p>
+              <p>
+                Avec des années d&apos;expérience et une équipe d&apos;experts dévoués, nous transformons les défis complexes en solutions durables et esthétiques. Chaque projet est pour nous une opportunité de démontrer notre savoir-faire et notre engagement envers l&apos;excellence.
+              </p>
+            </motion.div>
 
-              <div className="mt-12 grid grid-cols-2 gap-8">
-                <div>
-                  <span className="text-4xl font-black text-navy block mb-2">3+</span>
-                  <span className="text-xs uppercase tracking-widest text-charcoal font-medium">Années d'expérience</span>
-                </div>
+            <div className="mt-12 grid grid-cols-2 gap-8">
+              <div>
+                <span className="text-4xl font-black text-navy block mb-2">3+</span>
+                <span className="text-xs uppercase tracking-widest text-charcoal font-medium">Années d&apos;expérience</span>
+              </div>
                 <div>
                   <span className="text-4xl font-black text-navy block mb-2">20+</span>
                   <span className="text-xs uppercase tracking-widest text-charcoal font-medium">Projets réalisés</span>
@@ -73,13 +74,14 @@ export const About = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src="/young-black-race-man-with-blueprint-stading-near-glass-building.jpg"
-                  alt="Expert MP SERVICES IMMO"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="aspect-[4/5] overflow-hidden relative">
+              <Image
+                src="/young-black-race-man-with-blueprint-stading-near-glass-building.jpg"
+                alt="Expert MP SERVICES IMMO"
+                fill
+                className="object-cover"
+              />
+            </div>
               {/* Decorative Frame */}
               <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-gold -z-10" />
             </motion.div>
@@ -96,10 +98,11 @@ export const About = () => {
           transition={{ duration: 2, ease: "linear" }}
           className="absolute inset-0 z-0 opacity-20 grayscale"
         >
-          <img 
+          <Image 
             src="/construction-engineer.jpg" 
             alt="" 
-            className="w-full h-full object-cover scale-110"
+            fill
+            className="object-cover scale-110"
           />
         </motion.div>
         

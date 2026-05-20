@@ -46,7 +46,7 @@ export const Contact = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-charcoal text-lg mb-12 max-w-md font-medium"
             >
-              Vous avez une vision ? Nous avons l'expertise pour la concrétiser. Contactez-nous pour un devis personnalisé.
+              Vous avez une vision ? Nous avons l&apos;expertise pour la concrétiser. Contactez-nous pour un devis personnalisé.
             </motion.p>
 
             <div className="space-y-8">

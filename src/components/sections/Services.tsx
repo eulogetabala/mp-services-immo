@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import * as LucideIcons from "lucide-react";
 import { SERVICES } from "@/constants";
@@ -45,10 +46,11 @@ export const Services = () => {
     <section id="services" className="py-24 bg-white relative overflow-hidden">
       {/* Background Image Decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03] pointer-events-none grayscale">
-        <img 
+        <Image 
           src="/black-solar-panel-engineer-high-tech-facility-doing-inspection.jpg" 
           alt="" 
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
       </div>
       <div className="container mx-auto px-6 relative z-10">
@@ -80,7 +82,7 @@ export const Services = () => {
             viewport={{ once: true }}
             className="text-charcoal max-w-sm text-sm font-medium"
           >
-            Nous couvrons l'ensemble du cycle de vie d'un projet immobilier, de la conception technique à la réalisation finale.
+            Nous couvrons l&apos;ensemble du cycle de vie d&apos;un projet immobilier, de la conception technique à la réalisation finale.
           </motion.p>
         </div>
 

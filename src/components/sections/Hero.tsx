@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -46,13 +48,12 @@ export const Hero = () => {
           className="absolute inset-0 z-0"
         >
           <div className="absolute inset-0 bg-navy/50 z-10" />
-          <motion.img
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 10, ease: "linear" }}
+          <Image
             src={SLIDES[currentSlide].image}
             alt={SLIDES[currentSlide].title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         </motion.div>
       </AnimatePresence>
