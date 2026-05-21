@@ -91,18 +91,23 @@ export const LOCATIONS: Location[] = [
   },
 ];
 
-const formatMapsCoords = (location: Location) =>
-  location.lat != null && location.lng != null
-    ? `${location.lat},${location.lng}`
-    : encodeURIComponent(location.mapsQuery);
-
-export const getMapsPlaceUrl = (location: Location) =>
-  `https://www.google.com/maps/search/?api=1&query=${formatMapsCoords(location)}`;
-
-export const getMapsDirectionsUrl = () => {
-  const [brazzaville, pointeNoire] = LOCATIONS;
-  return `https://www.google.com/maps/dir/?api=1&origin=${formatMapsCoords(brazzaville)}&destination=${formatMapsCoords(pointeNoire)}&travelmode=driving`;
+const formatMapsCoords = (location: Location) => {
+  if (location.lat != null && location.lng != null) {
+    return `${location.lat},${location.lng}`;
+  }
+  return encodeURIComponent(location.mapsQuery);
 };
+
+/** Affiche le repère exact sur la carte (coordonnées GPS). */
+export const getMapsPlaceUrl = (location: Location) =>
+  `https://www.google.com/maps?q=${formatMapsCoords(location)}`;
+
+/** Itinéraire depuis la position actuelle vers les coordonnées GPS (Brazzaville). */
+export const getMapsNavigationUrl = (location: Location) =>
+  `https://www.google.com/maps/dir/?api=1&destination=${formatMapsCoords(location)}&travelmode=driving`;
+
+export const BRAZZAVILLE_LOCATION =
+  LOCATIONS.find((l) => l.city === "Brazzaville") ?? LOCATIONS[0];
 
 export const CONTACT_INFO = {
   email: "contact@mpservices-immo.com",

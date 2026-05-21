@@ -5,7 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { CONTACT_INFO, getMapsDirectionsUrl, getMapsPlaceUrl } from "@/constants";
+import {
+  BRAZZAVILLE_LOCATION,
+  CONTACT_INFO,
+  getMapsNavigationUrl,
+  getMapsPlaceUrl,
+} from "@/constants";
 
 export const Footer = () => {
   return (
@@ -100,20 +105,20 @@ export const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block hover:text-gold transition-colors"
-                      title={`Ouvrir ${location.city} dans Google Maps`}
+                      title={`Voir ${location.city} sur la carte (GPS)`}
                     >
                       <span className="text-gold font-black">{location.city} :</span>{" "}
                       {location.address}
                     </a>
                   ))}
                   <a
-                    href={getMapsDirectionsUrl()}
+                    href={getMapsNavigationUrl(BRAZZAVILLE_LOCATION)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block text-xs uppercase tracking-wider text-gold font-black hover:text-white transition-colors underline underline-offset-4"
-                    title="Itinéraire Brazzaville → Pointe-Noire"
+                    title="Itinéraire GPS vers Brazzaville"
                   >
-                    Itinéraire sur la carte
+                    Itinéraire GPS — Brazzaville
                   </a>
                 </div>
               </li>

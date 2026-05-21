@@ -3,7 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { CONTACT_INFO, getMapsDirectionsUrl, getMapsPlaceUrl } from "@/constants";
+import {
+  BRAZZAVILLE_LOCATION,
+  CONTACT_INFO,
+  getMapsNavigationUrl,
+  getMapsPlaceUrl,
+} from "@/constants";
 
 export const Contact = () => {
   return (
@@ -90,12 +95,13 @@ export const Contact = () => {
                       </a>
                     ))}
                     <a
-                      href={getMapsDirectionsUrl()}
+                      href={getMapsNavigationUrl(BRAZZAVILLE_LOCATION)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block text-xs uppercase tracking-wider text-gold font-black hover:text-navy transition-colors underline underline-offset-4"
+                      title="Itinéraire GPS vers Brazzaville"
                     >
-                      Itinéraire sur la carte
+                      Itinéraire GPS — Brazzaville
                     </a>
                   </div>
                 </div>
