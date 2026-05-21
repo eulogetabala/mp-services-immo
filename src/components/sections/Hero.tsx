@@ -19,7 +19,7 @@ const SLIDES = [
     title: "Services Immobiliers",
     subtitle: "Location & Gestion de Biens",
     description: "Trouvez la maison de vos rêves ou confiez-nous la gestion de vos propriétés avec sérénité.",
-    image: "/3.png",
+    image: "/4.png",
   },
 ];
 
