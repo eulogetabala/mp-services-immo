@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1f3657;
+  --color-gold: #c79c3e;
+  --color-charcoal: #42454c;
+  --color-anthracite: #121212;
+
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-usenet: "Usenet", sans-serif;
+  --font-nimbus: "Nimbus Sans", sans-serif;
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: var(--color-navy);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+}
